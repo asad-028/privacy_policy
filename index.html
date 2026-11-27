@@ -13,7 +13,7 @@
             --text-muted: #9ca3af;
             --accent-cyan: #00e5ff;
             --accent-orange: #ff9100;
-            --badge-bg: rgba(0, 229, 255, 0.1);
+            --badge-bg: rgba(0, 229, 255, 0.08);
         }
 
         * {
@@ -26,53 +26,81 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-dark);
             color: var(--text-main);
-            line-height: 1.7;
+            line-height: 1.75;
             padding: 20px;
         }
 
         .container {
-            max-width: 820px;
-            margin: 20px auto;
+            max-width: 840px;
+            margin: 24px auto;
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            padding: 44px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55);
         }
 
         header {
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 24px;
-            margin-bottom: 30px;
+            padding-bottom: 26px;
+            margin-bottom: 32px;
+        }
+
+        .brand-badge {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            background: rgba(0, 229, 255, 0.12);
+            border: 1px solid rgba(0, 229, 255, 0.25);
+            padding: 4px 12px;
+            border-radius: 999px;
+            margin-bottom: 12px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 2.1rem;
+            font-weight: 800;
             background: linear-gradient(90deg, var(--accent-cyan), var(--accent-orange));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
         }
 
         .meta-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 10px;
-            font-size: 0.9rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 12px;
+            font-size: 0.92rem;
             color: var(--text-muted);
+            background: rgba(255, 255, 255, 0.02);
+            padding: 14px 18px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .meta-grid strong {
             color: var(--text-main);
         }
 
+        .meta-grid a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+        }
+
+        .meta-grid a:hover {
+            text-decoration: underline;
+        }
+
         .summary-box {
             background-color: var(--badge-bg);
             border-left: 4px solid var(--accent-cyan);
-            padding: 16px 20px;
+            padding: 18px 22px;
             border-radius: 8px;
-            margin: 20px 0 30px 0;
-            font-size: 0.95rem;
+            margin: 22px 0 32px 0;
+            font-size: 0.96rem;
         }
 
         .summary-box strong {
@@ -82,17 +110,17 @@
         h2 {
             font-size: 1.35rem;
             color: var(--accent-cyan);
-            margin-top: 32px;
+            margin-top: 34px;
             margin-bottom: 14px;
-            padding-bottom: 6px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
         }
 
         h3 {
-            font-size: 1.1rem;
+            font-size: 1.08rem;
             color: var(--accent-orange);
-            margin-top: 22px;
-            margin-bottom: 8px;
+            margin-top: 24px;
+            margin-bottom: 10px;
         }
 
         p {
@@ -117,24 +145,28 @@
         code {
             background-color: rgba(255, 255, 255, 0.08);
             color: var(--accent-cyan);
-            padding: 2px 6px;
-            border-radius: 4px;
+            padding: 2px 7px;
+            border-radius: 5px;
             font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-            font-size: 0.88em;
+            font-size: 0.86em;
         }
 
         .contact-card {
-            background-color: rgba(255, 145, 0, 0.08);
-            border: 1px solid rgba(255, 145, 0, 0.3);
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 15px;
+            background-color: rgba(255, 145, 0, 0.07);
+            border: 1px solid rgba(255, 145, 0, 0.28);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
         }
 
         .contact-card a {
             color: var(--accent-orange);
             text-decoration: none;
             font-weight: 600;
+            font-size: 1.02rem;
         }
 
         .contact-card a:hover {
@@ -143,11 +175,20 @@
 
         footer {
             text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
+            margin-top: 44px;
+            padding-top: 22px;
             border-top: 1px solid var(--border-color);
-            font-size: 0.85rem;
+            font-size: 0.86rem;
             color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--accent-cyan);
         }
 
         @media (max-width: 600px) {
@@ -155,7 +196,7 @@
                 padding: 24px 18px;
             }
             h1 {
-                font-size: 1.6rem;
+                font-size: 1.65rem;
             }
         }
     </style>
@@ -164,20 +205,21 @@
 
     <div class="container">
         <header>
+            <div class="brand-badge">Official Legal Document</div>
             <h1>Privacy Policy for FlexiClick</h1>
             <div class="meta-grid">
                 <div><strong>Effective Date:</strong> November 27, 2026</div>
                 <div><strong>Last Updated:</strong> November 27, 2026</div>
                 <div><strong>Developer:</strong> FlexiClick Development Team</div>
-                <div><strong>Contact:</strong>flexiclick@asfreefooli.com</div>
+                <div><strong>Contact:</strong> <a href="mailto:flexiclick@asfreefooli.com">flexiclick@asfreefooli.com</a></div>
             </div>
         </header>
 
         <section>
             <h2>1. Introduction</h2>
-            <p>FlexiClick ("we", "our", or "the application") respects your privacy. This Privacy Policy explains our practices regarding user data, permissions, and the use of the Android AccessibilityService API.</p>
+            <p>FlexiClick ("we", "our", or "the application") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains our practices regarding user data, requested Android permissions, and the use of the Android AccessibilityService API.</p>
             <div class="summary-box">
-                <strong>Summary:</strong> FlexiClick does <strong>NOT</strong> collect, transmit, share, sell, or store any personal information, keystrokes, messages, passwords, or device analytics. All configuration profiles and click coordinates remain strictly on your local device.
+                <strong>Privacy Guarantee:</strong> FlexiClick does <strong>NOT</strong> collect, transmit, share, sell, or store any personal information, keystrokes, messages, passwords, or device analytics. All automation profiles and click coordinates remain strictly on your local device.
             </div>
         </section>
 
@@ -208,18 +250,18 @@
 
             <h3>C. Foreground Service (<code>android.permission.FOREGROUND_SERVICE</code> &amp; <code>FOREGROUND_SERVICE_SPECIAL_USE</code>)</h3>
             <ul>
-                <li><strong>Why Required:</strong> Ensures Android does not kill the automation timer loop when you minimize FlexiClick to run another application. A persistent notification is displayed whenever the foreground service is active.</li>
+                <li><strong>Why Required:</strong> Ensures Android does not terminate the automation timer loop when you minimize FlexiClick to run another application. A persistent notification is displayed whenever the foreground service is active.</li>
             </ul>
 
             <h3>D. Query All Packages (<code>android.permission.QUERY_ALL_PACKAGES</code>)</h3>
             <ul>
-                <li><strong>Why Required:</strong> Allows the in-app "Target Application" dialog to list installed applications so you can conveniently pick which application you wish to link to your automation profile.</li>
+                <li><strong>Why Required:</strong> Allows the in-app "Target Application" dialog to list installed applications so you can conveniently select which application you wish to link to your automation profile.</li>
             </ul>
         </section>
 
         <section>
             <h2>4. Local Data Storage</h2>
-            <p>FlexiClick stores your automation settings (tap coordinates, delay seconds, and theme preferences) locally on your device using Android <code>SharedPreferences</code>. This data never leaves your device and is wiped automatically if you uninstall the application or clear app data in Android settings.</p>
+            <p>FlexiClick stores your automation settings (tap coordinates, delay intervals, and theme preferences) locally on your device using Android <code>SharedPreferences</code>. This data never leaves your device and is permanently deleted if you uninstall the application or clear app data in Android settings.</p>
         </section>
 
         <section>
@@ -234,19 +276,20 @@
 
         <section>
             <h2>7. Changes to This Privacy Policy</h2>
-            <p>We may update this Privacy Policy from time to time. Any changes will be posted within the application and on our store listing page.</p>
+            <p>We may update this Privacy Policy from time to time. Any changes will be posted within the application and on our official Google Play Store listing page.</p>
         </section>
 
         <section>
             <h2>8. Contact Us</h2>
-            <p>If you have questions or concerns regarding this Privacy Policy, please contact:</p>
+            <p>If you have any questions, feedback, or concerns regarding this Privacy Policy or our data practices, please reach out to us directly:</p>
             <div class="contact-card">
-                <strong>Email:</strong> <a href="mailto:flexiclick@asfreefooli.com">flexiclick@asfreefooli.com</a>
+                <div><strong>Developer:</strong> FlexiClick Development Team</div>
+                <div><strong>Support Email:</strong> <a href="mailto:flexiclick@asfreefooli.com">flexiclick@asfreefooli.com</a></div>
             </div>
         </section>
 
         <footer>
-            &copy; 2026 FlexiClick Development Team. All rights reserved.
+            &copy; 2026 FlexiClick Development Team. All rights reserved. &bull; <a href="mailto:flexiclick@asfreefooli.com">flexiclick@asfreefooli.com</a>
         </footer>
     </div>
 
